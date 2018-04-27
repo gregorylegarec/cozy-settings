@@ -78,6 +78,14 @@
       "href": "/services/claudy"
     },
     {
+      "action": "REDIRECT",
+      "type": [
+        "io.cozy.settings"
+      ],
+      "href": "/",
+      "params": ["setting"]
+    },
+    {
       "action": "SUPPORT",
       "type": [
         "io.cozy.settings"

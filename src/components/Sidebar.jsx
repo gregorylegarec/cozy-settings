@@ -1,6 +1,6 @@
 import React from 'react'
 import { translate } from 'cozy-ui/react/I18n'
-import { NavLink as RouterLink } from 'react-router-dom'
+import { NavLink as RouterLink } from 'react-router'
 import Nav, {
   NavLink,
   NavItem,

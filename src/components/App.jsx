@@ -4,10 +4,11 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { translate } from 'cozy-ui/react/I18n'
 import classNames from 'classnames'
-import { Route, Switch, Redirect, withRouter } from 'react-router-dom'
+import { Route, Switch, Redirect, withRouter } from 'react-router'
 
 import Sidebar from './Sidebar'
 import { Alerter } from 'cozy-ui/react/Alerter'
+import IntentRedirect from './IntentRedirect'
 import Profile from '../containers/Profile'
 import Devices from '../containers/Devices'
 import Sessions from '../containers/Sessions'
@@ -17,9 +18,9 @@ class App extends Component {
   render ({ children }) {
     return (
       <div className={classNames(styles['app-wrapper'], styles['o-layout--2panes'])}>
+        <IntentRedirect param="setting" value="storage" to="/storage" />
         <Alerter />
         <Sidebar />
-
         <main className={styles['app-content']}>
           <Switch>
             <Route path='/profile' component={Profile} />
